@@ -42,19 +42,20 @@ export default function Gallery() {
         activeTab === "all"
             ? allImages
             : activeTab === "ambience"
-                ? ambienceImages
-                : foodImages;
+            ? ambienceImages
+            : foodImages;
 
     return (
         <section
             id="gallery"
-            className="bg-[#0A0A0A] text-white py-24 px-6"
+            className="bg-white text-zinc-900 py-24 px-6"
         >
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <p className="text-green-500 uppercase tracking-[0.3em] text-sm">
+
+                    <p className="text-green-600 uppercase tracking-[0.3em] text-sm">
                         Gallery
                     </p>
 
@@ -62,10 +63,11 @@ export default function Gallery() {
                         Moments Worth Sharing
                     </h2>
 
-                    <p className="text-zinc-400 max-w-2xl mx-auto mt-4">
+                    <p className="text-zinc-600 max-w-2xl mx-auto mt-4">
                         Explore our ambience, signature dishes,
                         celebrations and unforgettable dining experiences.
                     </p>
+
                 </div>
 
                 {/* Filter Buttons */}
@@ -73,30 +75,33 @@ export default function Gallery() {
 
                     <button
                         onClick={() => setActiveTab("all")}
-                        className={`px-6 py-3 rounded-full font-medium transition ${activeTab === "all"
-                            ? "bg-green-500 text-black"
-                            : "bg-zinc-800 text-white hover:bg-zinc-700"
-                            }`}
+                        className={`px-6 py-3 rounded-full font-medium transition ${
+                            activeTab === "all"
+                                ? "bg-black text-white"
+                                : "bg-gray-100 text-zinc-700 hover:bg-gray-200"
+                        }`}
                     >
                         All
                     </button>
 
                     <button
                         onClick={() => setActiveTab("ambience")}
-                        className={`px-6 py-3 rounded-full font-medium transition ${activeTab === "ambience"
-                            ? "bg-green-500 text-black"
-                            : "bg-zinc-800 text-white hover:bg-zinc-700"
-                            }`}
+                        className={`px-6 py-3 rounded-full font-medium transition ${
+                            activeTab === "ambience"
+                                ? "bg-black text-white"
+                                : "bg-gray-100 text-zinc-700 hover:bg-gray-200"
+                        }`}
                     >
                         Ambience
                     </button>
 
                     <button
                         onClick={() => setActiveTab("food")}
-                        className={`px-6 py-3 rounded-full font-medium transition ${activeTab === "food"
-                            ? "bg-green-500 text-black"
-                            : "bg-zinc-800 text-white hover:bg-zinc-700"
-                            }`}
+                        className={`px-6 py-3 rounded-full font-medium transition ${
+                            activeTab === "food"
+                                ? "bg-black text-white"
+                                : "bg-gray-100 text-zinc-700 hover:bg-gray-200"
+                        }`}
                     >
                         Food
                     </button>
@@ -104,20 +109,22 @@ export default function Gallery() {
                 </div>
 
                 {/* Gallery Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
                     {images.map((image, index) => (
                         <div
                             key={index}
                             onClick={() => setSelectedImage(image)}
-                            className="group cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 aspect-[4/3]"
+                            className="group cursor-pointer overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300"
                         >
-                            <img
-                                src={image}
-                                alt={`Gallery ${index + 1}`}
-                                loading="lazy"
-                                className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-                            />
+                            <div className="aspect-[4/3] overflow-hidden">
+                                <img
+                                    src={image}
+                                    alt={`Gallery ${index + 1}`}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                                />
+                            </div>
                         </div>
                     ))}
 
@@ -129,15 +136,16 @@ export default function Gallery() {
             {selectedImage && (
                 <div
                     onClick={() => setSelectedImage(null)}
-                    className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+                    className="fixed inset-0 z-[9999] bg-white/95 backdrop-blur-md flex items-center justify-center p-4"
                 >
                     <div
                         className="relative max-w-7xl w-full"
                         onClick={(e) => e.stopPropagation()}
                     >
+
                         <button
                             onClick={() => setSelectedImage(null)}
-                            className="absolute top-4 right-4 bg-black/70 hover:bg-black text-white p-3 rounded-full z-10"
+                            className="absolute top-4 right-4 bg-white hover:bg-gray-100 text-black p-3 rounded-full shadow-lg z-10"
                         >
                             <X size={24} />
                         </button>
@@ -145,8 +153,9 @@ export default function Gallery() {
                         <img
                             src={selectedImage}
                             alt="Full View"
-                            className="w-full max-h-[90vh] object-contain rounded-2xl"
+                            className="w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
                         />
+
                     </div>
                 </div>
             )}

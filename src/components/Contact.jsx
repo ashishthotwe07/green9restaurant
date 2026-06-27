@@ -4,12 +4,12 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="bg-[#070707] text-white py-24 px-6"
+            className="bg-white text-black py-24 px-6"
         >
             <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-16">
-                    <p className="text-green-500 uppercase tracking-[0.3em] text-sm">
+                    <p className="text-green-600 uppercase tracking-[0.3em] text-sm">
                         Contact Us
                     </p>
 
@@ -17,7 +17,7 @@ const Contact = () => {
                         Visit Green9 Today
                     </h2>
 
-                    <p className="text-zinc-400 max-w-2xl mx-auto mt-4">
+                    <p className="text-zinc-600 max-w-2xl mx-auto mt-4">
                         Reserve your table, plan your celebration,
                         or simply drop by for a memorable dining experience.
                     </p>
@@ -28,43 +28,43 @@ const Contact = () => {
                     {/* Left Side */}
                     <div className="space-y-6">
 
-                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
-                            <FaMapMarkerAlt className="text-green-500 text-2xl mb-4" />
+                        <div className="bg-white border border-zinc-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <FaMapMarkerAlt className="text-green-600 text-2xl mb-4" />
 
                             <h3 className="text-xl font-semibold mb-2">
                                 Address
                             </h3>
 
-                            <p className="text-zinc-400">
+                            <p className="text-zinc-600">
                                 Gat No. 668, Kesnand Road,
                                 Wagholi, Pune
                             </p>
                         </div>
 
-                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
-                            <FaPhoneAlt className="text-green-500 text-2xl mb-4" />
+                        <div className="bg-white border border-zinc-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <FaPhoneAlt className="text-green-600 text-2xl mb-4" />
 
                             <h3 className="text-xl font-semibold mb-2">
                                 Call Us
                             </h3>
 
-                            <p className="text-zinc-400">
+                            <p className="text-zinc-600">
                                 7218700909
                             </p>
 
-                            <p className="text-zinc-400">
+                            <p className="text-zinc-600">
                                 8087337711
                             </p>
                         </div>
 
-                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
-                            <FaClock className="text-green-500 text-2xl mb-4" />
+                        <div className="bg-white border border-zinc-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <FaClock className="text-green-600 text-2xl mb-4" />
 
                             <h3 className="text-xl font-semibold mb-2">
                                 Opening Hours
                             </h3>
 
-                            <p className="text-zinc-400">
+                            <p className="text-zinc-600">
                                 Daily: 11:00 AM - 11:30 PM
                             </p>
                         </div>
@@ -73,7 +73,7 @@ const Contact = () => {
 
                             <a
                                 href="tel:7218700909"
-                                className="bg-green-600 hover:bg-green-500 px-6 py-4 rounded-full font-medium transition"
+                                className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-full font-medium transition shadow-lg"
                             >
                                 Call Now
                             </a>
@@ -82,7 +82,7 @@ const Contact = () => {
                                 href="https://wa.me/917218700909"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="border border-white/20 px-6 py-4 rounded-full hover:border-green-500 transition"
+                                className="border border-zinc-300 bg-white px-6 py-4 rounded-full hover:border-green-600 hover:text-green-600 transition shadow-lg"
                             >
                                 WhatsApp
                             </a>
@@ -92,7 +92,7 @@ const Contact = () => {
                     </div>
 
                     {/* Right Side Map */}
-                    <div className="overflow-hidden rounded-3xl border border-white/10">
+                    <div className="overflow-hidden rounded-3xl border border-zinc-200 shadow-xl">
 
                         <iframe
                             title="Green9 Location"

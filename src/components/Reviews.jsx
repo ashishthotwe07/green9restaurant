@@ -35,19 +35,18 @@ const reviews = [
         review:
             "Top-notch service, especially from Mr. Sanju. Food arrived quickly, the atmosphere was great and the overall experience was excellent.",
     },
-
 ];
 
 const Reviews = () => {
     return (
         <section
             id="reviews"
-            className="bg-[#0A0A0A] text-white py-16 px-6"
+            className="bg-white text-black py-16 px-6"
         >
             <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-16">
-                    <p className="text-green-500 uppercase tracking-[0.3em] text-sm">
+                    <p className="text-green-600 uppercase tracking-[0.3em] text-sm">
                         Customer Reviews
                     </p>
 
@@ -55,33 +54,33 @@ const Reviews = () => {
                         What Our Guests Say
                     </h2>
 
-                    <p className="text-zinc-400 max-w-2xl mx-auto mt-4">
+                    <p className="text-zinc-600 max-w-2xl mx-auto mt-4">
                         Real experiences shared by our guests on Google Reviews.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-fr">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr">
 
                     {reviews.map((review, index) => (
                         <div
                             key={index}
-                            className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-green-500/40 hover:bg-white/[0.07] transition-all duration-300 flex flex-col h-full"
+                            className="bg-white border border-zinc-200 rounded-3xl p-8 flex flex-col h-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                         >
                             {/* Stars */}
-                            <div className="flex text-yellow-400 text-xl mb-5">
+                            <div className="flex text-yellow-500 text-xl mb-5">
                                 {"★".repeat(review.rating)}
                             </div>
 
                             {/* Review Text */}
                             <div className="flex-1">
-                                <p className="text-zinc-300 leading-relaxed">
+                                <p className="text-zinc-700 leading-relaxed">
                                     "{review.review}"
                                 </p>
                             </div>
 
                             {/* Reviewer */}
-                            <div className="border-t border-white/10 pt-5 mt-6">
-                                <h4 className="font-semibold text-lg">
+                            <div className="border-t border-zinc-200 pt-5 mt-6">
+                                <h4 className="font-semibold text-lg text-black">
                                     {review.name}
                                 </h4>
 
@@ -95,13 +94,13 @@ const Reviews = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-zinc-200 shadow-lg">
 
-                        <span className="text-yellow-400 text-xl">
+                        <span className="text-yellow-500 text-xl">
                             ★★★★★
                         </span>
 
-                        <span className="text-zinc-300">
+                        <span className="text-zinc-700">
                             Loved by hundreds of happy guests
                         </span>
 

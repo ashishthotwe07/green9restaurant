@@ -25,43 +25,49 @@ const Events = () => {
     return (
         <section
             id="events"
-            className="py-24 px-6 bg-[#070707] text-white"
+            className="py-24 px-6 bg-white"
         >
             <div className="max-w-7xl mx-auto">
 
+                {/* Heading */}
                 <div className="text-center mb-16">
-                    <p className="text-green-500 uppercase tracking-[0.3em] text-sm">
+
+                    <p className="text-green-600 uppercase tracking-[0.3em] text-sm">
                         Events & Celebrations
                     </p>
 
-                    <h2 className="text-4xl lg:text-5xl font-bold mt-4">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-zinc-900 mt-4">
                         Create Memories With Us
                     </h2>
 
-                    <p className="text-zinc-400 max-w-2xl mx-auto mt-4">
+                    <p className="text-zinc-600 max-w-2xl mx-auto mt-4">
                         From intimate gatherings to grand celebrations,
                         Green9 provides the perfect setting for every occasion.
                     </p>
+
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Event Cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     {events.map((event, index) => (
                         <div
                             key={index}
-                            className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-green-500 transition-all duration-300"
+                            className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            <div className="text-5xl mb-5">
+
+                            <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-4xl mb-6">
                                 {event.icon}
                             </div>
 
-                            <h3 className="text-xl font-semibold mb-3">
+                            <h3 className="text-xl font-semibold text-zinc-900 mb-3">
                                 {event.title}
                             </h3>
 
-                            <p className="text-zinc-400">
+                            <p className="text-zinc-600 leading-7">
                                 {event.desc}
                             </p>
+
                         </div>
                     ))}
 
