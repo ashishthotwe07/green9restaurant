@@ -322,7 +322,7 @@ export const menuData = [
     },
 
     {
-        category: "Sandwiches",
+        category: "Sandwiches (All Sandwiches will Be grilled)",
         items: [
             { name: "Veg Club Sandwich", price: 160 },
             { name: "Veg Grill Sandwich", price: 140 },

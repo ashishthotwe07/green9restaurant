@@ -50,6 +50,16 @@ export default function Menu() {
                     <p className="text-gray-500 mt-3">
                         Explore our delicious food & beverages
                     </p>
+
+                                                <p className="mt-2 text-sm md:text-base leading-7 text-amber-800">
+
+                                All menu prices displayed below are subject to an
+                                <span className="font-bold">
+                                    {" "}additional 5% GST
+                                </span>.
+                                
+
+                            </p>
                 </div>
 
                 {/* Search */}

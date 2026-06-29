@@ -14,7 +14,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex items-center pt-24 lg:pt-28 pb-8 bg-white overflow-hidden">
+        <section className="relative min-h-screen flex items-center pt-32 sm:pt-36 lg:pt-28 pb-8 bg-white overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute top-0 left-0 w-[450px] h-[430px] bg-green-200 blur-[180px]" />
